@@ -1,0 +1,106 @@
+{
+  "network": "studionet",
+  "chainId": 61999,
+  "stateVariant": "LATEST_FINAL",
+  "contract": "0x5D97353a41392f45475025EF29C388f7Dfdd2afb",
+  "proposal": {
+    "approval_reference": "Illustrative DAO vote #42 (self-attested)",
+    "approval_status": "SELF_ATTESTED",
+    "commitment_hash": "9742bedca352e8bafc5ff61f2d376ba8055a0c6e3dc3fa63fe21c649d0967ae8",
+    "id": "1",
+    "policy": {
+      "actions": [
+        {
+          "amount": "1000000000000000000",
+          "asset": "0x0000000000000000000000000000000000000000",
+          "kind": "NATIVE_TRANSFER",
+          "purpose": "Fund maintenance team 1",
+          "recipient": "0x1111111111111111111111111111111111111111"
+        },
+        {
+          "amount": "1000000000000000000",
+          "asset": "0x0000000000000000000000000000000000000000",
+          "kind": "NATIVE_TRANSFER",
+          "purpose": "Fund maintenance team 2",
+          "recipient": "0x2222222222222222222222222222222222222222"
+        },
+        {
+          "amount": "1000000000000000000",
+          "asset": "0x0000000000000000000000000000000000000000",
+          "kind": "NATIVE_TRANSFER",
+          "purpose": "Fund maintenance team 3",
+          "recipient": "0x3333333333333333333333333333333333333333"
+        }
+      ],
+      "chain_id": 1,
+      "treasury": "0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+    },
+    "policy_hash": "2434e3216b824a9ef316826d017d63e03d5534df75f5b4568ea0c447ff4de940",
+    "proposal_hash": "cb98f590e6941fecf077ca24e2c0b24d4fc4e7be76d287991d364e9159ba8a3c",
+    "proposal_text": "Approve funding three maintenance teams, one ETH each, for protocol maintenance work only. No marketing or other expenses are authorized. Each team receives its grant as one native ETH transfer from the treasury on Ethereum chain 1.",
+    "submitter": "0x34491d9a9492Cd6213dAb2E541AEd796DaE1Bca8",
+    "title": "Maintenance grants \u2014 three teams"
+  },
+  "review": {
+    "bundle": {
+      "chain_id": 1,
+      "transactions": [
+        {
+          "data": "0x",
+          "operation": 0,
+          "purpose": "Fund maintenance team 1",
+          "to": "0x1111111111111111111111111111111111111111",
+          "value": "1000000000000000000"
+        },
+        {
+          "data": "0x",
+          "operation": 0,
+          "purpose": "Fund maintenance team 2",
+          "to": "0x2222222222222222222222222222222222222222",
+          "value": "1000000000000000000"
+        },
+        {
+          "data": "0x",
+          "operation": 0,
+          "purpose": "Fund maintenance team 3",
+          "to": "0x3333333333333333333333333333333333333333",
+          "value": "1000000000000000000"
+        }
+      ],
+      "treasury": "0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+    },
+    "bundle_hash": "ade5d4c8d07d61d79c8d3ba1173b32dee8ffe6ab99ca5e6c11a002d56c1be849",
+    "decision_hash": "43818cc51cc8fef871c5da15f5c43c36d81a5003b8bbf551a5a636865287bf81",
+    "deterministic_errors": [],
+    "id": "2",
+    "proposal_commitment": "9742bedca352e8bafc5ff61f2d376ba8055a0c6e3dc3fa63fe21c649d0967ae8",
+    "proposal_id": "1",
+    "report": {
+      "checks": [
+        {
+          "category": "policy_alignment",
+          "finding": "MATCH",
+          "quote": "Approve funding three maintenance teams, one ETH each, for protocol maintenance work only.",
+          "reason": "The policy correctly maps the proposal's intent to fund three teams with 1 ETH each for maintenance.",
+          "source": "proposal"
+        },
+        {
+          "category": "execution_intent",
+          "finding": "MATCH",
+          "quote": "Fund maintenance team 1",
+          "reason": "The transaction purposes in the bundle align exactly with the maintenance funding authorized in the proposal and policy.",
+          "source": "bundle"
+        },
+        {
+          "category": "completeness",
+          "finding": "MATCH",
+          "quote": "Each team receives its grant as one native ETH transfer from the treasury on Ethereum chain 1.",
+          "reason": "All three requested transfers are present in the bundle with correct values, chain ID, and recipients as defined in the policy.",
+          "source": "proposal"
+        }
+      ],
+      "outcome": "MATCH"
+    },
+    "reviewer": "0x34491d9a9492Cd6213dAb2E541AEd796DaE1Bca8"
+  }
+}

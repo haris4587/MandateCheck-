@@ -1,0 +1,11 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs/promises';
+import {createReader,completed} from '../chain.js';
+const deployment=JSON.parse(await fs.readFile('deployment.json','utf8'));
+const reader=createReader();
+const review=await reader.read(deployment.address,'get_review',['3']);
+assert.equal(review.report.outcome,'MISMATCH');assert.deepEqual(review.deterministic_errors,[]);
+const tx=await reader.transaction('0x3535fd9258dcabe84dafbb1f7244408f18f242d7e50bf670ea6e66b913767d09');
+assert.equal(completed(tx),true);
+console.log('Live frontend SDK smoke passed: finalized review #3 MISMATCH, zero hard-check violations, transaction finalized with a successful GenVM return.');
+process.exit(0);

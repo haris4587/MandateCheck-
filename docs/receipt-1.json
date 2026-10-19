@@ -1,0 +1,94 @@
+{
+  "network": "studionet",
+  "chainId": 61999,
+  "stateVariant": "LATEST_FINAL",
+  "contract": "0x5D97353a41392f45475025EF29C388f7Dfdd2afb",
+  "proposal": {
+    "approval_reference": "Illustrative DAO vote #42 (self-attested)",
+    "approval_status": "SELF_ATTESTED",
+    "commitment_hash": "9742bedca352e8bafc5ff61f2d376ba8055a0c6e3dc3fa63fe21c649d0967ae8",
+    "id": "1",
+    "policy": {
+      "actions": [
+        {
+          "amount": "1000000000000000000",
+          "asset": "0x0000000000000000000000000000000000000000",
+          "kind": "NATIVE_TRANSFER",
+          "purpose": "Fund maintenance team 1",
+          "recipient": "0x1111111111111111111111111111111111111111"
+        },
+        {
+          "amount": "1000000000000000000",
+          "asset": "0x0000000000000000000000000000000000000000",
+          "kind": "NATIVE_TRANSFER",
+          "purpose": "Fund maintenance team 2",
+          "recipient": "0x2222222222222222222222222222222222222222"
+        },
+        {
+          "amount": "1000000000000000000",
+          "asset": "0x0000000000000000000000000000000000000000",
+          "kind": "NATIVE_TRANSFER",
+          "purpose": "Fund maintenance team 3",
+          "recipient": "0x3333333333333333333333333333333333333333"
+        }
+      ],
+      "chain_id": 1,
+      "treasury": "0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+    },
+    "policy_hash": "2434e3216b824a9ef316826d017d63e03d5534df75f5b4568ea0c447ff4de940",
+    "proposal_hash": "cb98f590e6941fecf077ca24e2c0b24d4fc4e7be76d287991d364e9159ba8a3c",
+    "proposal_text": "Approve funding three maintenance teams, one ETH each, for protocol maintenance work only. No marketing or other expenses are authorized. Each team receives its grant as one native ETH transfer from the treasury on Ethereum chain 1.",
+    "submitter": "0x34491d9a9492Cd6213dAb2E541AEd796DaE1Bca8",
+    "title": "Maintenance grants \u2014 three teams"
+  },
+  "review": {
+    "bundle": {
+      "chain_id": 1,
+      "transactions": [
+        {
+          "data": "0x",
+          "operation": 0,
+          "purpose": "Fund maintenance team 1",
+          "to": "0x1111111111111111111111111111111111111111",
+          "value": "1000000000000000000"
+        },
+        {
+          "data": "0x",
+          "operation": 0,
+          "purpose": "Fund maintenance team 2",
+          "to": "0x2222222222222222222222222222222222222222",
+          "value": "1000000000000000000"
+        },
+        {
+          "data": "0x",
+          "operation": 0,
+          "purpose": "Fund maintenance team 3",
+          "to": "0x3333333333333333333333333333333333333333",
+          "value": "1000000000000000000"
+        },
+        {
+          "data": "0x",
+          "operation": 0,
+          "purpose": "Fund unrelated recipient",
+          "to": "0xffffffffffffffffffffffffffffffffffffffff",
+          "value": "1000000000000000000"
+        }
+      ],
+      "treasury": "0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+    },
+    "bundle_hash": "746a82a050cf8acf84b877d1ea4a6b5100c3bde37fb39d0bbf94541eb9013505",
+    "decision_hash": "2af95e24f506b615031c080ce7c1554a8e4918c31d6ee6a5fa3f1f06845b087a",
+    "deterministic_errors": [
+      "ACTION_COUNT_MISMATCH",
+      "UNAPPROVED_ACTION:3"
+    ],
+    "id": "1",
+    "proposal_commitment": "9742bedca352e8bafc5ff61f2d376ba8055a0c6e3dc3fa63fe21c649d0967ae8",
+    "proposal_id": "1",
+    "report": {
+      "checks": [],
+      "outcome": "BLOCKED"
+    },
+    "reviewer": "0x34491d9a9492Cd6213dAb2E541AEd796DaE1Bca8"
+  }
+}

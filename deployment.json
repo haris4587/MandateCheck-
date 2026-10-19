@@ -1,0 +1,25 @@
+{
+  "network": "studionet",
+  "chainId": 61999,
+  "rpc": "https://studio.genlayer.com/api",
+  "address": "0x5D97353a41392f45475025EF29C388f7Dfdd2afb",
+  "studioUrl": "https://studio.genlayer.com/run-debug",
+  "website": "https://mandatecheck.itzanza2.chatgpt.site",
+  "sourceHash": "e015bc289fbd43fe0056eba898eb70b200d2faf0d89733cb67cb037fe29884f3",
+  "liveReviews": [
+    {
+      "id": "1",
+      "outcome": "BLOCKED"
+    },
+    {
+      "id": "2",
+      "outcome": "MATCH"
+    },
+    {
+      "id": "3",
+      "outcome": "MISMATCH"
+    }
+  ],
+  "explorerUrl": "https://explorer-studio.genlayer.com/address/0x5D97353a41392f45475025EF29C388f7Dfdd2afb",
+  "deploymentTransaction": "0x8e5e7f3ed8c64d661de3833ac851409f544bdec7fbb2a5a03cc7d95ed227f431"
+}

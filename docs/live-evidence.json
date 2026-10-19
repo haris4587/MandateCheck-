@@ -1,0 +1,322 @@
+{
+  "network": "studionet",
+  "chainId": 61999,
+  "address": "0x5D97353a41392f45475025EF29C388f7Dfdd2afb",
+  "capturedAt": "2026-10-19T05:50:17.024Z",
+  "stateVariant": "LATEST_FINAL",
+  "sourceMatchesRepository": true,
+  "sourceSha256": "e015bc289fbd43fe0056eba898eb70b200d2faf0d89733cb67cb037fe29884f3",
+  "proposals": [
+    {
+      "approval_reference": "Illustrative DAO vote #42 (self-attested)",
+      "approval_status": "SELF_ATTESTED",
+      "commitment_hash": "9742bedca352e8bafc5ff61f2d376ba8055a0c6e3dc3fa63fe21c649d0967ae8",
+      "id": "1",
+      "policy": {
+        "actions": [
+          {
+            "amount": "1000000000000000000",
+            "asset": "0x0000000000000000000000000000000000000000",
+            "kind": "NATIVE_TRANSFER",
+            "purpose": "Fund maintenance team 1",
+            "recipient": "0x1111111111111111111111111111111111111111"
+          },
+          {
+            "amount": "1000000000000000000",
+            "asset": "0x0000000000000000000000000000000000000000",
+            "kind": "NATIVE_TRANSFER",
+            "purpose": "Fund maintenance team 2",
+            "recipient": "0x2222222222222222222222222222222222222222"
+          },
+          {
+            "amount": "1000000000000000000",
+            "asset": "0x0000000000000000000000000000000000000000",
+            "kind": "NATIVE_TRANSFER",
+            "purpose": "Fund maintenance team 3",
+            "recipient": "0x3333333333333333333333333333333333333333"
+          }
+        ],
+        "chain_id": 1,
+        "treasury": "0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "policy_hash": "2434e3216b824a9ef316826d017d63e03d5534df75f5b4568ea0c447ff4de940",
+      "proposal_hash": "cb98f590e6941fecf077ca24e2c0b24d4fc4e7be76d287991d364e9159ba8a3c",
+      "proposal_text": "Approve funding three maintenance teams, one ETH each, for protocol maintenance work only. No marketing or other expenses are authorized. Each team receives its grant as one native ETH transfer from the treasury on Ethereum chain 1.",
+      "submitter": "0x34491d9a9492Cd6213dAb2E541AEd796DaE1Bca8",
+      "title": "Maintenance grants — three teams"
+    }
+  ],
+  "reviews": [
+    {
+      "bundle": {
+        "chain_id": 1,
+        "transactions": [
+          {
+            "data": "0x",
+            "operation": 0,
+            "purpose": "Fund maintenance team 1",
+            "to": "0x1111111111111111111111111111111111111111",
+            "value": "1000000000000000000"
+          },
+          {
+            "data": "0x",
+            "operation": 0,
+            "purpose": "Fund maintenance team 2",
+            "to": "0x2222222222222222222222222222222222222222",
+            "value": "1000000000000000000"
+          },
+          {
+            "data": "0x",
+            "operation": 0,
+            "purpose": "Fund maintenance team 3",
+            "to": "0x3333333333333333333333333333333333333333",
+            "value": "1000000000000000000"
+          },
+          {
+            "data": "0x",
+            "operation": 0,
+            "purpose": "Fund unrelated recipient",
+            "to": "0xffffffffffffffffffffffffffffffffffffffff",
+            "value": "1000000000000000000"
+          }
+        ],
+        "treasury": "0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "bundle_hash": "746a82a050cf8acf84b877d1ea4a6b5100c3bde37fb39d0bbf94541eb9013505",
+      "decision_hash": "2af95e24f506b615031c080ce7c1554a8e4918c31d6ee6a5fa3f1f06845b087a",
+      "deterministic_errors": [
+        "ACTION_COUNT_MISMATCH",
+        "UNAPPROVED_ACTION:3"
+      ],
+      "id": "1",
+      "proposal_commitment": "9742bedca352e8bafc5ff61f2d376ba8055a0c6e3dc3fa63fe21c649d0967ae8",
+      "proposal_id": "1",
+      "report": {
+        "checks": [],
+        "outcome": "BLOCKED"
+      },
+      "reviewer": "0x34491d9a9492Cd6213dAb2E541AEd796DaE1Bca8"
+    },
+    {
+      "bundle": {
+        "chain_id": 1,
+        "transactions": [
+          {
+            "data": "0x",
+            "operation": 0,
+            "purpose": "Fund maintenance team 1",
+            "to": "0x1111111111111111111111111111111111111111",
+            "value": "1000000000000000000"
+          },
+          {
+            "data": "0x",
+            "operation": 0,
+            "purpose": "Fund maintenance team 2",
+            "to": "0x2222222222222222222222222222222222222222",
+            "value": "1000000000000000000"
+          },
+          {
+            "data": "0x",
+            "operation": 0,
+            "purpose": "Fund maintenance team 3",
+            "to": "0x3333333333333333333333333333333333333333",
+            "value": "1000000000000000000"
+          }
+        ],
+        "treasury": "0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "bundle_hash": "ade5d4c8d07d61d79c8d3ba1173b32dee8ffe6ab99ca5e6c11a002d56c1be849",
+      "decision_hash": "43818cc51cc8fef871c5da15f5c43c36d81a5003b8bbf551a5a636865287bf81",
+      "deterministic_errors": [],
+      "id": "2",
+      "proposal_commitment": "9742bedca352e8bafc5ff61f2d376ba8055a0c6e3dc3fa63fe21c649d0967ae8",
+      "proposal_id": "1",
+      "report": {
+        "checks": [
+          {
+            "category": "policy_alignment",
+            "finding": "MATCH",
+            "quote": "Approve funding three maintenance teams, one ETH each, for protocol maintenance work only.",
+            "reason": "The policy correctly maps the proposal's intent to fund three teams with 1 ETH each for maintenance.",
+            "source": "proposal"
+          },
+          {
+            "category": "execution_intent",
+            "finding": "MATCH",
+            "quote": "Fund maintenance team 1",
+            "reason": "The transaction purposes in the bundle align exactly with the maintenance funding authorized in the proposal and policy.",
+            "source": "bundle"
+          },
+          {
+            "category": "completeness",
+            "finding": "MATCH",
+            "quote": "Each team receives its grant as one native ETH transfer from the treasury on Ethereum chain 1.",
+            "reason": "All three requested transfers are present in the bundle with correct values, chain ID, and recipients as defined in the policy.",
+            "source": "proposal"
+          }
+        ],
+        "outcome": "MATCH"
+      },
+      "reviewer": "0x34491d9a9492Cd6213dAb2E541AEd796DaE1Bca8"
+    },
+    {
+      "bundle": {
+        "chain_id": 1,
+        "transactions": [
+          {
+            "data": "0x",
+            "operation": 0,
+            "purpose": "Fund a marketing campaign rather than maintenance",
+            "to": "0x1111111111111111111111111111111111111111",
+            "value": "1000000000000000000"
+          },
+          {
+            "data": "0x",
+            "operation": 0,
+            "purpose": "Fund maintenance team 2",
+            "to": "0x2222222222222222222222222222222222222222",
+            "value": "1000000000000000000"
+          },
+          {
+            "data": "0x",
+            "operation": 0,
+            "purpose": "Fund maintenance team 3",
+            "to": "0x3333333333333333333333333333333333333333",
+            "value": "1000000000000000000"
+          }
+        ],
+        "treasury": "0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "bundle_hash": "0db0d69b5d17b2d70130804ed98b0b88b53f97340f09e0c96c92bdca5487d0df",
+      "decision_hash": "1d3f7188724751eef13723fb0bd5dc9aed3d0e423150d83ee3fb03e533052cde",
+      "deterministic_errors": [],
+      "id": "3",
+      "proposal_commitment": "9742bedca352e8bafc5ff61f2d376ba8055a0c6e3dc3fa63fe21c649d0967ae8",
+      "proposal_id": "1",
+      "report": {
+        "checks": [
+          {
+            "category": "policy_alignment",
+            "finding": "MATCH",
+            "quote": "Approve funding three maintenance teams, one ETH each, for protocol maintenance work only.",
+            "reason": "The policy correctly reflects the proposal's requirement for three transfers of 1 ETH for maintenance purposes.",
+            "source": "proposal"
+          },
+          {
+            "category": "execution_intent",
+            "finding": "MISMATCH",
+            "quote": "Fund a marketing campaign rather than maintenance",
+            "reason": "The first transaction purpose explicitly deviates from the approved maintenance purpose to marketing, which the proposal specifically forbids.",
+            "source": "bundle"
+          },
+          {
+            "category": "completeness",
+            "finding": "MATCH",
+            "quote": "Each team receives its grant as one native ETH transfer from the treasury on Ethereum chain 1.",
+            "reason": "The bundle contains all three required transactions on the correct chain and from the correct treasury as specified.",
+            "source": "proposal"
+          }
+        ],
+        "outcome": "MISMATCH"
+      },
+      "reviewer": "0x34491d9a9492Cd6213dAb2E541AEd796DaE1Bca8"
+    }
+  ],
+  "transactions": [
+    {
+      "hash": "0x3535fd9258dcabe84dafbb1f7244408f18f242d7e50bf670ea6e66b913767d09",
+      "sender": "0x34491d9a9492Cd6213dAb2E541AEd796DaE1Bca8",
+      "type": 2,
+      "status": "FINALIZED",
+      "result": "3",
+      "executionResults": [
+        "SUCCESS",
+        "SUCCESS"
+      ],
+      "votes": {
+        "0x17ac0CaefB18205c737e64ee582c9245A28ca1f9": "agree",
+        "0x40533175AfBbAee2c030F88259Afb5aEDbCF0E05": "agree",
+        "0x5Bbbd7cdD63c0ba7f088038Cb049bDDAbE4F6fd1": "agree",
+        "0x8a876C3F3a4783Bd123982bcBF3c672dc0239004": "disagree",
+        "0xA712cB25a4002666FA9D09477251f238dD9e06b3": "disagree"
+      },
+      "calldata": "FgRhcmdzFQwxjCJ7ImNoYWluX2lkIjoxLCJ0cmVhc3VyeSI6IjB4YmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYiIsInRyYW5zYWN0aW9ucyI6W3sidG8iOiIweDExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTEiLCJ2YWx1ZSI6IjEwMDAwMDAwMDAwMDAwMDAwMDAiLCJkYXRhIjoiMHgiLCJvcGVyYXRpb24iOjAsInB1cnBvc2UiOiJGdW5kIGEgbWFya2V0aW5nIGNhbXBhaWduIHJhdGhlciB0aGFuIG1haW50ZW5hbmNlIn0seyJ0byI6IjB4MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMiIsInZhbHVlIjoiMTAwMDAwMDAwMDAwMDAwMDAwMCIsImRhdGEiOiIweCIsIm9wZXJhdGlvbiI6MCwicHVycG9zZSI6IkZ1bmQgbWFpbnRlbmFuY2UgdGVhbSAyIn0seyJ0byI6IjB4MzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMyIsInZhbHVlIjoiMTAwMDAwMDAwMDAwMDAwMDAwMCIsImRhdGEiOiIweCIsIm9wZXJhdGlvbiI6MCwicHVycG9zZSI6IkZ1bmQgbWFpbnRlbmFuY2UgdGVhbSAzIn1dfQZtZXRob2RscmV2aWV3X2J1bmRsZQ=="
+    },
+    {
+      "hash": "0xb56521adf32cb22b402799fff12cabea53b411da5c7acb43e2cdc568b34cdbd6",
+      "sender": "0x34491d9a9492Cd6213dAb2E541AEd796DaE1Bca8",
+      "type": 2,
+      "status": "FINALIZED",
+      "result": "2",
+      "executionResults": [
+        "SUCCESS",
+        "SUCCESS"
+      ],
+      "votes": {
+        "0x17ac0CaefB18205c737e64ee582c9245A28ca1f9": "idle",
+        "0x9244De5F20cB75A0c51d79A9A3208D00a99aFc10": "idle",
+        "0xa21bc502E3578E4b3039be8c59a257198f7c3f19": "agree",
+        "0xad7d13f269CeAd4379E64a1A3a0803a827e70B43": "agree",
+        "0xe7eEe8a1c1690b0322d795B80A76ab2Cd1a0eAFd": "agree"
+      },
+      "calldata": "FgRhcmdzFQwxvCB7ImNoYWluX2lkIjoxLCJ0cmVhc3VyeSI6IjB4YmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYiIsInRyYW5zYWN0aW9ucyI6W3sidG8iOiIweDExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTEiLCJ2YWx1ZSI6IjEwMDAwMDAwMDAwMDAwMDAwMDAiLCJkYXRhIjoiMHgiLCJvcGVyYXRpb24iOjAsInB1cnBvc2UiOiJGdW5kIG1haW50ZW5hbmNlIHRlYW0gMSJ9LHsidG8iOiIweDIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIiLCJ2YWx1ZSI6IjEwMDAwMDAwMDAwMDAwMDAwMDAiLCJkYXRhIjoiMHgiLCJvcGVyYXRpb24iOjAsInB1cnBvc2UiOiJGdW5kIG1haW50ZW5hbmNlIHRlYW0gMiJ9LHsidG8iOiIweDMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMiLCJ2YWx1ZSI6IjEwMDAwMDAwMDAwMDAwMDAwMDAiLCJkYXRhIjoiMHgiLCJvcGVyYXRpb24iOjAsInB1cnBvc2UiOiJGdW5kIG1haW50ZW5hbmNlIHRlYW0gMyJ9XX0GbWV0aG9kbHJldmlld19idW5kbGU="
+    },
+    {
+      "hash": "0x2196f37066d7079d1072d54aa854f323bb34f7ba37daca1a91cd2e1eac7aeb9f",
+      "sender": "0x34491d9a9492Cd6213dAb2E541AEd796DaE1Bca8",
+      "type": 2,
+      "status": "FINALIZED",
+      "result": "1",
+      "executionResults": [
+        "SUCCESS",
+        "SUCCESS"
+      ],
+      "votes": {
+        "0x1dEcE6A694520b1d3a2e24b9f28500858C756BDb": "agree",
+        "0x9244De5F20cB75A0c51d79A9A3208D00a99aFc10": "agree",
+        "0xA712cB25a4002666FA9D09477251f238dD9e06b3": "idle",
+        "0xa21bc502E3578E4b3039be8c59a257198f7c3f19": "agree",
+        "0xe7eEe8a1c1690b0322d795B80A76ab2Cd1a0eAFd": "idle"
+      },
+      "calldata": "FgRhcmdzFQwxxCl7ImNoYWluX2lkIjoxLCJ0cmVhc3VyeSI6IjB4YmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYiIsInRyYW5zYWN0aW9ucyI6W3sidG8iOiIweDExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTEiLCJ2YWx1ZSI6IjEwMDAwMDAwMDAwMDAwMDAwMDAiLCJkYXRhIjoiMHgiLCJvcGVyYXRpb24iOjAsInB1cnBvc2UiOiJGdW5kIG1haW50ZW5hbmNlIHRlYW0gMSJ9LHsidG8iOiIweDIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIiLCJ2YWx1ZSI6IjEwMDAwMDAwMDAwMDAwMDAwMDAiLCJkYXRhIjoiMHgiLCJvcGVyYXRpb24iOjAsInB1cnBvc2UiOiJGdW5kIG1haW50ZW5hbmNlIHRlYW0gMiJ9LHsidG8iOiIweDMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMiLCJ2YWx1ZSI6IjEwMDAwMDAwMDAwMDAwMDAwMDAiLCJkYXRhIjoiMHgiLCJvcGVyYXRpb24iOjAsInB1cnBvc2UiOiJGdW5kIG1haW50ZW5hbmNlIHRlYW0gMyJ9LHsidG8iOiIweGZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmYiLCJ2YWx1ZSI6IjEwMDAwMDAwMDAwMDAwMDAwMDAiLCJkYXRhIjoiMHgiLCJvcGVyYXRpb24iOjAsInB1cnBvc2UiOiJGdW5kIHVucmVsYXRlZCByZWNpcGllbnQifV19Bm1ldGhvZGxyZXZpZXdfYnVuZGxl"
+    },
+    {
+      "hash": "0xd2def134ad8a1fa218c1bdc8e5afa484da03c3675f29e002e0b2ceb3f67b1f2e",
+      "sender": "0x34491d9a9492Cd6213dAb2E541AEd796DaE1Bca8",
+      "type": 2,
+      "status": "FINALIZED",
+      "result": "1",
+      "executionResults": [
+        "SUCCESS",
+        "SUCCESS"
+      ],
+      "votes": {
+        "0x17ac0CaefB18205c737e64ee582c9245A28ca1f9": "idle",
+        "0x1dEcE6A694520b1d3a2e24b9f28500858C756BDb": "idle",
+        "0x40533175AfBbAee2c030F88259Afb5aEDbCF0E05": "agree",
+        "0x892C437da9b9CA0b6017B6f046F58E3526B46ec6": "agree",
+        "0x8a876C3F3a4783Bd123982bcBF3c672dc0239004": "agree"
+      },
+      "calldata": "FgRhcmdzJZQCTWFpbnRlbmFuY2UgZ3JhbnRzIOKAlCB0aHJlZSB0ZWFtc8wCSWxsdXN0cmF0aXZlIERBTyB2b3RlICM0MiAoc2VsZi1hdHRlc3RlZCnEDkFwcHJvdmUgZnVuZGluZyB0aHJlZSBtYWludGVuYW5jZSB0ZWFtcywgb25lIEVUSCBlYWNoLCBmb3IgcHJvdG9jb2wgbWFpbnRlbmFuY2Ugd29yayBvbmx5LiBObyBtYXJrZXRpbmcgb3Igb3RoZXIgZXhwZW5zZXMgYXJlIGF1dGhvcml6ZWQuIEVhY2ggdGVhbSByZWNlaXZlcyBpdHMgZ3JhbnQgYXMgb25lIG5hdGl2ZSBFVEggdHJhbnNmZXIgZnJvbSB0aGUgdHJlYXN1cnkgb24gRXRoZXJldW0gY2hhaW4gMS60K3siY2hhaW5faWQiOjEsInRyZWFzdXJ5IjoiMHhiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiIiwiYWN0aW9ucyI6W3sia2luZCI6Ik5BVElWRV9UUkFOU0ZFUiIsInJlY2lwaWVudCI6IjB4MTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMSIsImFzc2V0IjoiMHgwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwIiwiYW1vdW50IjoiMTAwMDAwMDAwMDAwMDAwMDAwMCIsInB1cnBvc2UiOiJGdW5kIG1haW50ZW5hbmNlIHRlYW0gMSJ9LHsia2luZCI6Ik5BVElWRV9UUkFOU0ZFUiIsInJlY2lwaWVudCI6IjB4MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMiIsImFzc2V0IjoiMHgwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwIiwiYW1vdW50IjoiMTAwMDAwMDAwMDAwMDAwMDAwMCIsInB1cnBvc2UiOiJGdW5kIG1haW50ZW5hbmNlIHRlYW0gMiJ9LHsia2luZCI6Ik5BVElWRV9UUkFOU0ZFUiIsInJlY2lwaWVudCI6IjB4MzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMyIsImFzc2V0IjoiMHgwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwIiwiYW1vdW50IjoiMTAwMDAwMDAwMDAwMDAwMDAwMCIsInB1cnBvc2UiOiJGdW5kIG1haW50ZW5hbmNlIHRlYW0gMyJ9XX0GbWV0aG9kfGNvbW1pdF9wcm9wb3NhbA=="
+    },
+    {
+      "hash": "0x8e5e7f3ed8c64d661de3833ac851409f544bdec7fbb2a5a03cc7d95ed227f431",
+      "sender": "0x34491d9a9492Cd6213dAb2E541AEd796DaE1Bca8",
+      "type": 1,
+      "status": "FINALIZED",
+      "result": "",
+      "executionResults": [
+        "SUCCESS",
+        "SUCCESS"
+      ],
+      "votes": {
+        "0x17ac0CaefB18205c737e64ee582c9245A28ca1f9": "idle",
+        "0x2FcBC452425f2F1e102c5c04b4331fcB46ee1c00": "agree",
+        "0x8a876C3F3a4783Bd123982bcBF3c672dc0239004": "agree",
+        "0xb0925568bFbCF00aADBcA053E6D0E1628ff3d530": "agree",
+        "0xe7eEe8a1c1690b0322d795B80A76ab2Cd1a0eAFd": "idle"
+      },
+      "calldata": "Bg=="
+    }
+  ]
+}

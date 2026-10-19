@@ -1,0 +1,1 @@
+{"name":"mandatecheck","version":"1.0.0","private":true,"type":"module","scripts":{"build":"node scripts/build.mjs","test":"python -m unittest discover -s tests -v && node --test tests/frontend.test.mjs"},"dependencies":{"genlayer-js":"1.1.8"},"devDependencies":{"esbuild":"0.25.10"}}
