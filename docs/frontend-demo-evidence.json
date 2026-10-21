@@ -1,0 +1,134 @@
+{
+  "capturedAt": "2026-10-21T03:26:51.554Z",
+  "publishedFrontend": "https://mandatecheck.itzanza2.chatgpt.site/",
+  "network": "studionet",
+  "chainId": 61999,
+  "contract": "0x5D97353a41392f45475025EF29C388f7Dfdd2afb",
+  "sourceMatchesRepository": true,
+  "sourceSha256": "e015bc289fbd43fe0056eba898eb70b200d2faf0d89733cb67cb037fe29884f3",
+  "frontendExportMatchesFinalizedState": true,
+  "proposal": {
+    "approval_reference": "Illustrative DAO vote #42 (self-attested)",
+    "approval_status": "SELF_ATTESTED",
+    "commitment_hash": "449c6cf9b2cc86b473938d9d7a1a9308f4a04de540067c7dd28d2695123d76d9",
+    "id": "2",
+    "policy": {
+      "actions": [
+        {
+          "amount": "1000000000000000000",
+          "asset": "0x0000000000000000000000000000000000000000",
+          "kind": "NATIVE_TRANSFER",
+          "purpose": "Fund maintenance team 1",
+          "recipient": "0x1111111111111111111111111111111111111111"
+        },
+        {
+          "amount": "1000000000000000000",
+          "asset": "0x0000000000000000000000000000000000000000",
+          "kind": "NATIVE_TRANSFER",
+          "purpose": "Fund maintenance team 2",
+          "recipient": "0x2222222222222222222222222222222222222222"
+        },
+        {
+          "amount": "1000000000000000000",
+          "asset": "0x0000000000000000000000000000000000000000",
+          "kind": "NATIVE_TRANSFER",
+          "purpose": "Fund maintenance team 3",
+          "recipient": "0x3333333333333333333333333333333333333333"
+        }
+      ],
+      "chain_id": 1,
+      "treasury": "0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+    },
+    "policy_hash": "2434e3216b824a9ef316826d017d63e03d5534df75f5b4568ea0c447ff4de940",
+    "proposal_hash": "cb98f590e6941fecf077ca24e2c0b24d4fc4e7be76d287991d364e9159ba8a3c",
+    "proposal_text": "Approve funding three maintenance teams, one ETH each, for protocol maintenance work only. No marketing or other expenses are authorized. Each team receives its grant as one native ETH transfer from the treasury on Ethereum chain 1.",
+    "submitter": "0x9446294A0115D51bd63CAFE8bbDa26Dc62f4F146",
+    "title": "Frontend steward reproduction — 2026-10-21"
+  },
+  "review": {
+    "bundle": {
+      "chain_id": 1,
+      "transactions": [
+        {
+          "data": "0x",
+          "operation": 0,
+          "purpose": "Fund maintenance team 1",
+          "to": "0x1111111111111111111111111111111111111111",
+          "value": "1000000000000000000"
+        },
+        {
+          "data": "0x",
+          "operation": 0,
+          "purpose": "Fund maintenance team 2",
+          "to": "0x2222222222222222222222222222222222222222",
+          "value": "1000000000000000000"
+        },
+        {
+          "data": "0x",
+          "operation": 0,
+          "purpose": "Fund maintenance team 3",
+          "to": "0x3333333333333333333333333333333333333333",
+          "value": "1000000000000000000"
+        }
+      ],
+      "treasury": "0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+    },
+    "bundle_hash": "ade5d4c8d07d61d79c8d3ba1173b32dee8ffe6ab99ca5e6c11a002d56c1be849",
+    "decision_hash": "0bbcda9c5181f08a2bbc718c6bfd33511a3c4864146febc4172a69879c568b31",
+    "deterministic_errors": [],
+    "id": "4",
+    "proposal_commitment": "449c6cf9b2cc86b473938d9d7a1a9308f4a04de540067c7dd28d2695123d76d9",
+    "proposal_id": "2",
+    "report": {
+      "checks": [
+        {
+          "category": "policy_alignment",
+          "finding": "MATCH",
+          "quote": "Approve funding three maintenance teams, one ETH each, for protocol maintenance work only.",
+          "reason": "The policy correctly maps the proposal's intent to fund three teams with 1 ETH each for maintenance.",
+          "source": "proposal"
+        },
+        {
+          "category": "execution_intent",
+          "finding": "MATCH",
+          "quote": "Fund maintenance team 1",
+          "reason": "Transaction purposes in the bundle align exactly with the maintenance purposes defined in the policy and proposal.",
+          "source": "bundle"
+        },
+        {
+          "category": "completeness",
+          "finding": "MATCH",
+          "quote": "Each team receives its grant as one native ETH transfer from the treasury on Ethereum chain 1.",
+          "reason": "The bundle contains all three required transfers with the correct amounts, recipients, and chain ID as specified.",
+          "source": "proposal"
+        }
+      ],
+      "outcome": "MATCH"
+    },
+    "reviewer": "0x9446294A0115D51bd63CAFE8bbDa26Dc62f4F146"
+  },
+  "transactions": [
+    {
+      "method": "commit_proposal",
+      "hash": "0x20a6b50012ab354e5c0b90fe8b57e969d60fe70c43c5461d6c3dae332fa65c14",
+      "status": "FINALIZED",
+      "execution": "FINISHED_WITH_RETURN",
+      "returnedRecordId": "2",
+      "sender": "0x9446294A0115D51bd63CAFE8bbDa26Dc62f4F146",
+      "contract": "0x5D97353a41392f45475025EF29C388f7Dfdd2afb",
+      "executionMode": "NORMAL",
+      "leaderOnly": false
+    },
+    {
+      "method": "review_bundle",
+      "hash": "0xaa2673ce72fcf879d5fe7de4a93bfdad2ba3721de5431515b38a9a730a50dcb6",
+      "status": "FINALIZED",
+      "execution": "FINISHED_WITH_RETURN",
+      "returnedRecordId": "4",
+      "sender": "0x9446294A0115D51bd63CAFE8bbDa26Dc62f4F146",
+      "contract": "0x5D97353a41392f45475025EF29C388f7Dfdd2afb",
+      "executionMode": "NORMAL",
+      "leaderOnly": false
+    }
+  ]
+}

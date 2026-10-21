@@ -8,12 +8,17 @@ A DAO intends to fund three maintenance teams. Its proposed execution adds a fou
 
 ## The product
 
-1. Commit the proposal text, approval reference, and ordered transfer policy.
-2. Prepare a proposed execution bundle against that immutable proposal ID.
-3. Sign `commit_proposal` or `review_bundle` in GenLayer Studio using its built-in account.
-4. Read the finalized record in the public app, inspect evidence, and export the receipt.
+1. Open the [public app](https://mandatecheck.itzanza2.chatgpt.site/#workbench), which is pinned to the existing Studionet contract `0x5D97353a41392f45475025EF29C388f7Dfdd2afb`.
+2. Choose **Use Studionet demo account**, then **Get demo funds**, or connect an EIP-1193 browser wallet on chain 61999.
+3. Load a proposal example, click **Commit proposal on Studionet**, inspect its confirmation dialog, and sign/submit directly in the app.
+4. The app follows consensus to finalization, extracts the returned Proposal ID from that transaction's GenVM return, reads the finalized proposal, and fills the review form.
+5. Submit the bundle directly. The returned Review ID opens its finalized live findings automatically; export the receipt or share the review link.
 
-The frontend calls real GenLayer view methods with `LATEST_FINAL`. Its request builder supplies exact method names and argument values with individual copy controls. Signing occurs in Studio, not through an external wallet or a key imported into the website. This is an explicit Studio signing workflow, not a claim of a cross-origin Studio wallet connection.
+No Studio workspace, source import, or new contract deployment is needed. Browser-wallet users approve the request in their wallet. The optional demo account is generated using the SDK and kept in this tab's sessionStorage; it is a disposable test-only signer, **not** the user's Studio built-in account. No private key import/export or server signer exists. Never send real funds to the demo account. Wallet network/account changes are checked before writes; no wallet Snap installation is required.
+
+The app uses real `writeContract` calls with full consensus and zero value, checks finalization plus successful execution, and reads `LATEST_FINAL`. Transaction hashes and request metadata survive a reload in localStorage; **Resume tracking** checks the same hash without repeating the write. Ambiguous submission errors require checking account history before clearing the request. The contract contains no deployment method and the UI cannot deploy another instance.
+
+See [reviewer instructions and correction](docs/STEWARD-RESPONSE.md) and the [published frontend demonstration](docs/FRONTEND-DEMO.md).
 
 **Approval is self-attested.** The submitter address is recorded, but a proposal reference does not prove a real DAO vote passed. The supplied immutable text is the review baseline. MandateCheck neither executes transfers nor verifies external DAO authority, treasury control, token code, or the eventual executed transaction. A MATCH is a review result for these exact committed inputs.
 
@@ -79,9 +84,9 @@ node scripts/read-evidence.mjs
 python scripts/verify_receipt.py path/to/exported-receipt.json
 ```
 
-`npm test` runs 40 Python contract/receipt tests and six SDK/frontend tests. Offline tests mock the GenVM host, storage, and model responses while executing the real contract source; they are not real multi-validator executions. The separate live evidence captures real Full Consensus Studio transactions and finalized reads. See [deployment instructions](docs/DEPLOYMENT.md).
+`npm test` runs 40 Python contract/receipt tests and 21 SDK/frontend tests. Offline tests mock the GenVM host, storage, and model responses while executing the real contract source; they are not real multi-validator executions. The separate live evidence captures real Full Consensus Studio transactions and finalized reads. See [deployment instructions](docs/DEPLOYMENT.md).
 
-The app is a static ES module bundle built with esbuild and pinned `genlayer-js` 1.1.8. It contains no private keys, database, server signing service, or browser-generated wallet. The contract pins the SDK runner in its source header. The static host serves `dist/`; the tracked Sites manifest identifies the public project.
+The app is a static ES module bundle built with esbuild and pinned `genlayer-js` 1.1.8. The bundle contains no embedded keys or server signing service. A demo key is generated at runtime only after the user chooses that option. The contract pins the SDK runner in its source header. The static host serves `dist/`; the tracked Sites manifest identifies the public project.
 
 ## Official documentation checked
 
